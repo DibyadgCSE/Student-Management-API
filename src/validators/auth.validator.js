@@ -20,12 +20,6 @@ const registerValidator = [
     .withMessage('Password is required')
     .isLength({ min: 6 })
     .withMessage('Password must be at least 6 characters long'),
-  // Role is optional during registration; defaults to 'student' in DB schema, but we can allow passing it if needed.
-  // For a production app, you might restrict who can register as an 'admin'.
-  body('role')
-    .optional()
-    .isIn(['student', 'admin'])
-    .withMessage('Role must be either student or admin'),
 ];
 
 // Validation rules for user login

@@ -8,7 +8,8 @@ const { hashPassword, comparePassword, generateToken } = require('../utils/auth.
  * @returns {Object} { user, token }
  */
 const registerUser = async (userData) => {
-  const { name, email, password, role = 'student' } = userData;
+  const { name, email, password } = userData;
+  const role = 'student'; // Role is always 'student' on self-registration. Admin accounts are seeded only.
 
   // 1. Check if the user already exists
   const existingUserResult = await db.query('SELECT * FROM users WHERE email = $1', [email]);

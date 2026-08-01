@@ -35,7 +35,7 @@ const query = (text, params) => pool.query(text, params);
 /**
  * Gets a dedicated client from the pool (used for database transactions).
  */
-const getClient = () => pool.getClient();
+const getClient = () => pool.connect();
 
 module.exports = {
   pool,

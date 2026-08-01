@@ -11,6 +11,13 @@ logs
 *.log
 npm-debug.log*
 
+# Test Coverage Reports
+coverage/
+
+# Personal/accidental files
+interview_study_guide.md
+interview_study_guide.pdf
+
 # OS Files
 .DS_Store
 Thumbs.db
